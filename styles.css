@@ -1,0 +1,73 @@
+.hero__inner {
+  background-color: #000000;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.hero__title {
+  color: #ffffff;
+  margin: 0;
+  font-size: 62px;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero__photos {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: calc(
+    100% - 80px
+  ); /* Resta 80px para crear espacio negro a los costados */
+}
+
+.hero__photo {
+  flex: 1;
+  height: 280px; /* Aumenta la altura de las fotos */
+  background-color: #ffffff;
+  margin: 10px; /* Ajusta el margen */
+  border: 2px solid #000000;
+}
+
+.hero__byline {
+  color: #ffffff;
+  margin-top: 20px;
+  font-size: 42px;
+}
+
+/* Estilos para la versión móvil */
+@media (max-width: 768px) {
+  .hero__inner {
+    margin-top: 100px; /* Ajusta el margen superior */
+    margin-bottom: 100px; /* Ajusta el margen inferior */
+  }
+
+  .hero__title {
+    font-size: 32px; /* Ajusta el tamaño de la fuente del título */
+  }
+
+  .hero__photos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    overflow-x: auto; /* Agrega desplazamiento horizontal */
+  }
+
+  .hero__photo {
+    flex: 0 0 auto; /* Desactiva el crecimiento flexible */
+    width: 150px; /* Ajusta el ancho de las fotos */
+    height: 150px; /* Ajusta la altura de las fotos */
+    margin: 5px; /* Ajusta el margen */
+    border: 2px solid #000000;
+  }
+
+  .hero__byline {
+    font-size: 20px; /* Ajusta el tamaño de la fuente de la línea */
+  }
+}
