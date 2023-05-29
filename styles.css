@@ -27,7 +27,8 @@ body {
   margin: 0;
   font-size: 62px;
   font-family: 'Libre Baskerville', serif;
-  font-weight: 250;
+  font-weight: lighter;
+  letter-spacing: -1px;
 }
 
 .hero__photos {
@@ -64,6 +65,7 @@ body {
   margin-top: 20px;
   font-size: 42px;
   font-family: 'Libre Baskerville', serif;
+  letter-spacing: -1px;
 }
 
 .hero {
@@ -78,10 +80,37 @@ body {
 }
 
 .hero__top {
-  background-color: rgb(251, 212, 92);
+  background-color: rgb(250, 195, 8);
   width: 100%;
   height: 180px;
   overflow: hidden;
+}
+
+.hero__top::before,
+.hero__top::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.hero__top::after {
+  right: 0;
+  background: radial-gradient(
+    ellipse at top right,
+    rgba(61, 61, 61, 0.8),
+    rgba(61, 61, 61, 0)
+  );
+}
+
+.hero__top::before {
+  left: 0;
+  background: radial-gradient(
+    ellipse at top left,
+    rgba(61, 61, 61, 0.8),
+    rgba(61, 61, 61, 0)
+  );
 }
 
 .hero__bottom {
@@ -90,9 +119,6 @@ body {
   height: 180px;
   overflow: hidden;
 }
-
-.hero__top::before,
-.hero__top::after,
 .hero__bottom::before,
 .hero__bottom::after {
   content: '';
@@ -102,26 +128,23 @@ body {
   height: 100%;
 }
 
-.hero__top::before,
 .hero__bottom::before {
   left: 0;
-  background: linear-gradient(
-    to right,
-    rgba(128, 128, 128, 0.3),
-    rgba(128, 128, 128, 0)
+  background: radial-gradient(
+    ellipse at bottom left,
+    rgba(61, 61, 61, 0.8),
+    rgba(61, 61, 61, 0)
   );
 }
 
-.hero__top::after,
 .hero__bottom::after {
   right: 0;
-  background: linear-gradient(
-    to left,
-    rgba(128, 128, 128, 0.3),
-    rgba(128, 128, 128, 0)
+  background: radial-gradient(
+    ellipse at bottom right,
+    rgba(61, 61, 61, 0.8),
+    rgba(61, 61, 61, 0)
   );
 }
-
 .circles-container {
   position: absolute;
   top: 50%;
@@ -138,6 +161,6 @@ body {
   height: 60px;
   background-color: white;
   border-radius: 50%;
-  box-shadow: 0 0 16px 4px rgba(255, 255, 255, 0.8); /* Aumenta el tamaño y la intensidad del halo */
+  box-shadow: 0 0 16px 7px rgba(255, 255, 255, 10); /* Aumenta el tamaño y la intensidad del halo */
   margin: 0 10px;
 }
