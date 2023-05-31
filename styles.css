@@ -25,7 +25,7 @@ body {
 .hero__title {
   color: #ffffff;
   margin: 0;
-  font-size: 62px;
+  font-size: 63px;
   font-family: 'Libre Baskerville', serif;
   font-weight: lighter;
   letter-spacing: -1px;
@@ -95,24 +95,22 @@ body {
   height: 100%;
 }
 
-.hero__top::after {
-  right: 0;
-  background: radial-gradient(
-    ellipse at top right,
-    rgba(61, 61, 61, 0.8),
-    rgba(61, 61, 61, 0)
-  );
-}
-
 .hero__top::before {
   left: 0;
   background: radial-gradient(
     ellipse at top left,
-    rgba(61, 61, 61, 0.8),
-    rgba(61, 61, 61, 0)
+    rgba(61, 61, 61, 0.9),
+    rgba(176, 176, 176, 0)
   );
 }
-
+.hero__top::after {
+  right: 0;
+  background: radial-gradient(
+    ellipse at top right,
+    rgba(61, 61, 61, 0.9),
+    rgba(176, 176, 176, 0)
+  );
+}
 .hero__bottom {
   background-color: rgba(190, 85, 190, 255);
   width: 100%;
@@ -132,7 +130,7 @@ body {
   left: 0;
   background: radial-gradient(
     ellipse at bottom left,
-    rgba(61, 61, 61, 0.8),
+    rgba(61, 61, 61, 0.9),
     rgba(61, 61, 61, 0)
   );
 }
@@ -141,14 +139,13 @@ body {
   right: 0;
   background: radial-gradient(
     ellipse at bottom right,
-    rgba(61, 61, 61, 0.8),
+    rgba(61, 61, 61, 0.9),
     rgba(61, 61, 61, 0)
   );
 }
 .circles-container {
   position: absolute;
   top: 50%;
-  left: 0;
   transform: translateY(-50%);
   width: 100%;
   display: flex;
@@ -161,6 +158,6 @@ body {
   height: 60px;
   background-color: white;
   border-radius: 50%;
-  box-shadow: 0 0 16px 7px rgba(255, 255, 255, 10); /* Aumenta el tamaño y la intensidad del halo */
+  box-shadow: 0 0 16px 7px rgba(255, 255, 255, 10);
   margin: 0 10px;
 }
