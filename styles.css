@@ -59,30 +59,12 @@ body {
 }
 
 .hero__top {
-  background-color: hsl(48, 100%, 60%);
+  background-color: hsl(48deg 79.61% 50.57%);
   filter: contrast(1.5) brightness(1.5);
   width: 100%;
   height: 180px;
   overflow: hidden;
 }
-
-/* .hero__vignette {
-  position: relative;
-}
-
-.hero__vignette::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    120% 180% at center 100%,
-    transparent 60%,
-    black 65%
-  );
-} */
 
 .hero__bottom {
   background-color: hsl(300, 100%, 50%);
@@ -114,22 +96,6 @@ body {
 .hero__vignette {
   position: relative;
 }
-/* 
-.hero__vignette::after {
-  content: '';
-  position: absolute;
-
-  top: 0;
-
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 0 8em rgba(0, 0, 0, 0.8) inset;
-
-
-  overflow: hidden;
-}
- */
 
 .hero__vignette::after {
   content: '';
@@ -142,8 +108,89 @@ body {
   background: radial-gradient(
     at center 50%,
     transparent 85%,
-    rgba(8, 8, 8, 0.7) 60%,
-    rgb(6 6 0.8) 95%
+    rgba(22, 22, 22, 0.63) 60%,
+    rgba(35, 35, 32, 0.8) 95%
   );
   filter: blur(10px);
+}
+
+@media (max-width: 880px) and (max-height: 1180px) {
+  .hero__title {
+    font-size: 40px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .hero__photos {
+    width: calc(100% - 40px);
+    padding-bottom: 40px;
+  }
+
+  .hero__photo {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 912px) and (max-height: 1368px) {
+  .hero__title {
+    font-size: 50px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .hero__photos {
+    width: calc(80% - 60px);
+    padding-bottom: 60px;
+  }
+
+  .hero__photo {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1024px), (max-height: 600px) {
+  .hero__photos {
+    width: calc(90% - 60px);
+    padding-bottom: 40px;
+    justify-content: space-between;
+  }
+
+  .hero__photo {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 375px), (max-height: 667px) {
+  .hero__title {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .hero__photos {
+    width: calc(90% - 20px);
+    padding-bottom: 20px;
+  }
+
+  .hero__photo {
+    padding: 0 2px;
+  }
+}
+
+@media (max-width: 414px), (max-height: 896px) {
+  .hero__title {
+    font-size: 25px;
+    white-space: nowrap;
+  }
+
+  .hero__photos {
+    width: calc(90% - 20px);
+    padding-bottom: 20px;
+  }
+
+  .hero__photo {
+    padding: 0 2px;
+  }
+  .hero__byline {
+    font-size: 20px;
+  }
 }
