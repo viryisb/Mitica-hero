@@ -30,6 +30,7 @@
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
+  padding-top: 20px;
   width: calc(75% - 80px);
   max-height: 280px;
   overflow: hidden;
@@ -59,7 +60,9 @@
 
 .hero__top {
   position: relative;
-  background-color: hsl(48deg 79.61% 50.57%);
+  /*  background-color: hsl(48deg 79.61% 50.57%);
+  filter: contrast(1.5); */
+  background-color: hsl(48 70% 51% / 1);
   filter: contrast(1.5);
   width: 100%;
   height: 180px;
@@ -67,8 +70,10 @@
 }
 .hero__bottom {
   position: relative;
-  background-color: hsl(300, 100%, 50%);
-  filter: contrast(1.5);
+  /* background-color: hsl(300, 100%, 50%);
+  filter: contrast(1.5); */
+  background-color: hsl(300 70% 50% / 1);
+  filter: contrast(1.2);
   width: 100%;
   height: 180px;
   overflow: hidden;
@@ -88,10 +93,10 @@
   background: radial-gradient(
     at center 50%,
     transparent 85%,
-    rgba(22, 22, 22, 0.63) 60%,
-    rgba(35, 35, 32, 0.8) 95%
+    rgb(22 22 22 / 32%) 60%,
+    rgb(35 35 32 / 66%) 95%
   );
-  filter: blur(10px);
+  filter: blur(13px);
 }
 
 .circles-container {
